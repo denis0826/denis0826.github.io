@@ -4,6 +4,7 @@ body {
 }
 .main {
   margin-top: 50px;
+  position: relative;
 }
 header img {
   display: block;  
@@ -85,7 +86,7 @@ hr {
   color: #9ba2a8;
   margin-bottom: 10px;
   width: 100%;
-  padding-left: 10%;
+  padding-left: 20%;
   font-size: 12px;
 }
 .students-area .student-card img{
@@ -233,6 +234,159 @@ footer ul li:last-child:after  {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
 }
+.hidden {
+  opacity: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 0, 0, 0.59);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+.modal-header {
+  padding: 5px 15px;
+  color: white;
+  text-align: center;
+}
+.modal-header h2 {
+  color: rgb(45, 45, 45);
+}
+.modal-content {
+  top: 0;
+  margin-top: 100px;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 0.4s;
+  animation-name: pulse;
+  animation-duration: 0.4s;
+  border: 5px solid rgba(0, 0, 0, 0.77);
+  border-radius: 10px;
+}
+.close {
+  color: #2d2727;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-body {
+  padding: 2px 20px 20px;
+}
+.modal-body input {
+  border: 3px solid rgba(0,0,0,0.2);
+  background-color: #f1f1f1;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.modal-body button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(228, 59, 44);
+  font-size: 23px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+}
+.modal span.txt {
+  text-align: center;
+  display: block;
+  margin: 10px auto 0;
+  font-size: 16px;
+  color: #9da3aa;
+  font-weight: 300;
+}
+.fa-lock:before {
+  content: "\f023";
+  margin-right: 5px;
+  font-size: 17px;
+  display: inline-block;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
 @media (max-width:360px) {
   .yt-area button.yt {
     max-width: 290px;
@@ -245,6 +399,18 @@ footer ul li:last-child:after  {
     margin-right: auto;
     display: block;
     float: none;
+  }
+}
+@media (min-width: 320px) {
+  .students-area .student-card h4{
+    font-size: 16px;
+    line-height: 45px;
+  }
+  .students-area .student-card a{
+    font-size: 16px;
+  }
+  .students-area .student-card ul li{    
+    font-size: 13px;
   }
 }
 @media (min-width: 768px) { 
@@ -286,15 +452,9 @@ footer ul li:last-child:after  {
   .yt-area span{
     font-size: 16px;
   }
-  .students-area .student-card h4{
-    font-size: 16px;
-    line-height: 45px;
-  }
-  .students-area .student-card a{
-    font-size: 16px;
-  }
   .students-area .student-card ul li{    
     font-size: 13px;
+    padding-left: 10%;
   }
   footer ul {    
     margin: 40px auto 0;

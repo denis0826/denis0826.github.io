@@ -29,7 +29,9 @@
         <strong>THAN MOST PEOPLE MAKE FROM THEIR 9 TO 5 JOB</strong>
       </div>
       <div class="col-xs-12 col-md-6">
-        <img src="img/video.jpg" alt="video" class="img-responsive">
+        <a id="myBtn" href="#">
+          <img src="img/video.jpg" alt="video" class="img-responsive modal-click">
+        </a>        
       </div>
     </div>
     <hr />
@@ -100,6 +102,26 @@
         </ul>
       </div>
     </footer>
+  
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="container">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Enter your info below to get free instant access...</h2>
+        </div>
+        <div class="modal-body">
+          <form name="myForm"  onsubmit="return validateForm();" >
+            <input id="name" type="text" name="name" placeholder="My First Name Is...">
+            <input id="email" type="text" name="email" placeholder="My Email Is...">
+            <button>GIVE ME THE FIRST FREE VIDEO</button>
+            <span class="txt fa fa-lock">We'll keep your information private.</span>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/main.js"></script>
