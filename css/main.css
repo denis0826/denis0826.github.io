@@ -1,0 +1,123 @@
+body {
+  background-color: #0c131b;
+  font-family: 'Open Sans', sans-serif;
+}
+.main {
+  margin-top: 50px;
+}
+/* PROMOTION SECTION */
+.promotion {
+  position: relative;
+  padding-top: 124px;
+  padding-bottom: 124px;
+}
+.promotion h3 {
+  color: #4eeed6;
+  font-size: 24px;
+  font-weight: 300;
+}
+.promotion h1 {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 50px;
+}
+.promotion strong {
+  color: #dbdcde;
+  font-weight: 300;
+}
+/* STUDENTS AREA SECTION */
+.students-area {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #2f363e;
+}
+.students-area h2 {
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 80px 0px;
+}
+.students-area .student-card {
+  border: 1px solid #2f363e;
+  text-align: center;
+}
+.students-area .student-card ul{
+  text-align: left;
+}
+.students-area .student-card ul li{
+  list-style: none;
+  text-align: left;
+  color: #9ba2a8;
+  margin-bottom: 10px;
+}
+.students-area .student-card img{
+  border-radius: 50%;
+  width: 130px;
+  display: block;
+  margin: 20px auto;
+}
+.students-area .student-card h4{
+  color: #4eeed6;
+}
+.students-area .student-card a{
+  color: #ffffff;
+  text-decoration: none;
+}
+/* BOOTSTRAP SNIPETS COPY */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.row:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+[class*="col-"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
