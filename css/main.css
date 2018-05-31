@@ -1,70 +1,197 @@
 body {
   background-color: #0c131b;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 .main {
   margin-top: 50px;
 }
+header img {
+  display: block;  
+  margin: 0 auto;
+}
 /* PROMOTION SECTION */
 .promotion {
   position: relative;
-  padding-top: 124px;
-  padding-bottom: 124px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .promotion h3 {
-  color: #4eeed6;
-  font-size: 24px;
-  font-weight: 300;
+  text-align: center;
+  color: #50f8df;
+  font-size: 14px;
+  margin-top: 0;
+  line-height: 20px;
+  font-weight: 600;
 }
 .promotion h1 {
+  text-align: center;
   color: #ffffff;
-  font-weight: 400;
-  font-size: 50px;
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 30px;
+  font-style: italic;
+  margin: 10px auto;
 }
 .promotion strong {
-  color: #dbdcde;
+  text-align: center;
+  color: #dcdcdc;
   font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+}
+.promotion img {
+  display: block;  
+  margin: 50px auto 0;
 }
 /* STUDENTS AREA SECTION */
 .students-area {
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 15px;
 }
 hr {
   border: none;
-  border-top: 1px solid #2f363e;
+  border-top: 1px solid #30363d;
 }
 .students-area h2 {
   color: #ffffff;
   text-align: center;
-  margin: 0 0 80px 0px;
+  margin: 0 0 50px 0px;
+  font-weight: 600;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 15px;
+  padding-right: 15px;  
 }
 .students-area .student-card {
-  border: 1px solid #2f363e;
+  border: 1px solid #30363d;
   text-align: center;
+  padding: 35px 0px 35px;
+  margin-bottom: 30px;
 }
 .students-area .student-card ul{
-  text-align: left;
+  overflow: hidden;
+  padding: 0;
+  max-width: 320px;
+  width: 100%;
+  display: block;
+  margin: 30px auto 0;
 }
 .students-area .student-card ul li{
   list-style: none;
   text-align: left;
   color: #9ba2a8;
   margin-bottom: 10px;
+  width: 100%;
+  padding-left: 10%;
+  font-size: 12px;
 }
 .students-area .student-card img{
   border-radius: 50%;
   width: 130px;
   display: block;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 .students-area .student-card h4{
-  color: #4eeed6;
+  color: #50f8df;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 35px;
+  margin: 15px 0px 0;
 }
 .students-area .student-card a{
   color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
   text-decoration: none;
+}
+
+/* YT BUTTON */
+.yt-area {
+  position: relative;
+  padding-bottom: 50px;
+}
+.yt-area button.yt {
+  font-family: 'Nunito Sans', sans-serif;
+  border: 2px solid #50f8df;
+  color: #fff;
+  padding: 8px 20px;
+  background: none;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 15px;
+  max-width: 320px;
+  width: 100%;
+}
+.yt-area button.fa:before {
+  float: left;
+  color: #4ae3cd;
+}
+.yt-area button.fa:after {
+  float: right;
+  content: "\f105";
+}
+.yt-area button.fa:before, .yt-area button.fa:after {
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-size: 24px;
+}
+.yt-area span{  
+  text-align: center;
+  display: block;
+  margin: 10px auto 0;
+  font-size: 13px;
+  color: #9da3aa;
+  font-weight: 300;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  padding: 40px 0;
+}
+footer .footer-logo {
+  display: block;
+  margin: 0 auto 30px;
+}
+footer small {
+  text-align: center;
+  color: #9da3aa;
+  font-weight: 300;
+  display: block;
+  font-size: 10px;
+  margin: 10px 0;
+}
+footer ul {
+  max-width: 310px;
+  width: 100%;
+  display: block;
+  margin: 30px auto 0;
+  padding: 0;
+}
+footer ul li{
+  list-style: none;
+  color: #9da3aa;
+  font-weight: 300;
+  font-size: 10px;
+  display: inline-block;
+}
+footer ul li a {
+  color: #50f8df;
+  text-decoration: none;
+}
+footer ul li:after {
+  content: " | ";
+
+}
+footer ul li:last-child:after  {
+  content: " ";
+
 }
 /* BOOTSTRAP SNIPETS COPY */
 .container {
@@ -106,18 +233,140 @@ hr {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
 }
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
+@media (max-width:360px) {
+  .yt-area button.yt {
+    max-width: 290px;
+  }
+}
+@media (max-width:767px) {
+  .card {
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
+  }
+}
+@media (min-width: 768px) { 
+  .promotion {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .promotion h3 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .promotion h1 {
+    line-height: 50px;
+    font-size: 42px;    
+    width: 90%;
+  }
+  .promotion strong { 
+    font-size: 26px;
+    line-height: 36px; 
+  }
+  .students-area {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .students-area h2 {
+    font-size: 28px;
+    margin: 0 0 60px 0px;
+  }
+  .students-area .student-card {
+    padding: 30px 0px 30px;
+    margin-bottom: 0;
+  }
+  .yt-area {
+    padding-bottom: 60px;
+  }
+  .yt-area button.yt {
+    font-size: 16px;
+  }
+  .yt-area span{
+    font-size: 16px;
+  }
+  .students-area .student-card h4{
+    font-size: 16px;
+    line-height: 45px;
+  }
+  .students-area .student-card a{
+    font-size: 16px;
+  }
+  .students-area .student-card ul li{    
+    font-size: 13px;
+  }
+  footer ul {    
+    margin: 40px auto 0;
+    max-width: 380px;
+  }
+  footer small {
+    font-size: 12px;
+  }
+  footer ul li {
+    font-size: 12px;
   }
 }
 @media (min-width: 992px) {
-  .container {
-    width: 970px;
+  header img {
+    float: left;
   }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1100px;
+  .promotion {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }  
+  .promotion h3 {
+    font-size: 20px;
+    text-align: left;
+  }  
+  .promotion strong {
+    text-align: left;     
+    width: 80%;
+  }
+  .promotion h1 {
+    text-align: left;
+    line-height: 65px;
+    font-size: 50px;
+    margin: 10px 0;
+  }  
+  .promotion img {
+    margin: 0 auto;
+  }
+  .students-area h2 {
+    font-size: 36px;
+    margin: 0 0 70px 0px;
+  }  
+  .yt-area {
+    padding-bottom: 75px;
+  }
+  .yt-area button.yt {
+    font-size: 20px;
+  }
+  .yt-area span{
+    font-size: 16px;
+  }
+  .students-area .student-card {
+    padding: 50px 0px 50px;
+  }
+  .students-area .student-card h4{
+    font-size: 20px;
+    line-height: 65px;
+  }
+  .students-area .student-card a{
+    font-size: 20px;
+  }
+  .students-area .student-card ul li{    
+    font-size: 16px;
+  }
+  
+  footer ul {    
+    margin: 50px auto 0;
+    max-width: 450px;
+  }
+  footer small {
+    font-size: 14px;
+  }
+  footer ul li {
+    font-size: 14px;
   }
 }
