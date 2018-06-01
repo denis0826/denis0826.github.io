@@ -310,7 +310,7 @@ footer ul li:last-child:after  {
 .modal-body button {
   color: rgb(255, 255, 255);
   background-color: rgb(228, 59, 44);
-  font-size: 23px;
+  font-size: 18px;
   border: none;
   width: 100%;
   padding: 10px;
@@ -494,6 +494,9 @@ footer ul li:last-child:after  {
   .students-area .student-card ul li{    
     font-size: 13px;
     padding-left: 10%;
+  }  
+  .modal-body button {
+    font-size: 23px;
   }
   footer ul {    
     margin: 40px auto 0;
