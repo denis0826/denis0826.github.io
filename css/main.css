@@ -45,6 +45,10 @@ header img {
 .promotion img {
   display: block;  
   margin: 50px auto 0;
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 0.4s;
+  animation-name: pulse;
+  animation-duration: 0.4s;
 }
 /* STUDENTS AREA SECTION */
 .students-area {
@@ -316,7 +320,7 @@ footer ul li:last-child:after  {
   color: #9da3aa;
   font-weight: 300;
 }
-.fa-lock:before {
+.modal .fa-lock:before {
   content: "\f023";
   margin-right: 5px;
   font-size: 17px;
@@ -362,29 +366,50 @@ footer ul li:last-child:after  {
   animation-name: pulse;
 }
 
-@-webkit-keyframes fadeOut {
-  from {
+@-webkit-keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%,
+  55% {
     opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
   }
 
   to {
     opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
 }
 
-@keyframes fadeOut {
-  from {
+@keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%,
+  55% {
     opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
   }
 
   to {
     opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
 }
-
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
+.bounceOut {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut;
 }
 
 @media (max-width:360px) {
