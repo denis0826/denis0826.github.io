@@ -10,7 +10,7 @@
   btn.onclick = function() {
     modal.style.display = "block";
   }
-  
+
   btn2.onclick = function() {
     modal.style.display = "block";
   }
@@ -60,8 +60,6 @@ function validateForm() {
   var email = document.myForm.email;
   var borderName = document.getElementById('name').style;
   var borderEmail = document.getElementById('email').style;
-
-  console.log(!validateEmail(email.value));
 
   if (name.value == "" && email.value == "" && !validateEmail(email.value)) {
     name.focus();
