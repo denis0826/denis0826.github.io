@@ -302,6 +302,7 @@ footer ul li:last-child:after  {
   padding: 16px 20px;
   box-sizing: border-box;
   text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
 }
 .modal-body button {
   color: rgb(255, 255, 255);
@@ -311,6 +312,16 @@ footer ul li:last-child:after  {
   width: 100%;
   padding: 10px;
   border-bottom: 3px solid rgba(0,0,0,0.2);
+}
+.modal-body form span.inpt {
+  position: relative;
+  width: 100%;
+}
+.modal-body form span.inpt:before {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  color: #9e9fa0;
 }
 .modal span.txt {
   text-align: center;
